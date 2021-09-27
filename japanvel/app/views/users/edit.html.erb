@@ -1,0 +1,8 @@
+<編集>
+<%= form_with model: @user, url:users_mypage_path, local:true do |f| %>
+  ニックネーム<%= f.text_field :name %></br>
+  メール<%= f.text_field :email %>
+
+  <%= f.submit "更新する" %>
+  <%= link_to "退会する", users_mypage_verify_path %>
+<% end %>

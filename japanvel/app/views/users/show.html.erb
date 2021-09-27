@@ -1,0 +1,11 @@
+<h3>ユーザー情報</h3>
+
+<%= form_with model:@user, url:users_mypage_edit_path, local:true do |f|%>
+
+(USER NAME)<%= @user.name %></br>
+
+(Users Email)<%= @user.email %></br>
+
+<%= link_to "編集する", users_mypage_edit_path %>
+
+<% end %>
