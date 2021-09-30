@@ -1,0 +1,16 @@
+投稿やさけー
+<%= form_with model:@prefecture, url:prefectures_path, method: :post, local:true do |f|  %>
+
+場所<%= f.collection_select(:area_id, Area.all, :id, :name) %></br>
+
+画像<%= f.attachment_field :image %></br>
+
+住所<%= f.text_field :address %></br>
+
+ひとこと<%= f.text_field :point %></br>
+
+詳細<%= f.text_area :detail %>
+
+<%= f.submit "投稿する" %>
+
+<% end %>

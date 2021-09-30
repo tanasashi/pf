@@ -4,11 +4,15 @@ Rails.application.routes.draw do
 
   root to: 'homes#top'
 
+
   get 'users/mypage', to: 'users#show'
   patch 'users/mypage', to: 'users#update'
   get 'users/mypage/edit', to: 'users#edit'
   get 'users/mypage/verify', to: 'users#verify'
   patch 'users/mypage/withdrawl', to: 'users#withdrawl'
+
+
+  resources :prefectures, only: [:index, :create, :show, :update, :destroy]
 
 
 end
