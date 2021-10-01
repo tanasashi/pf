@@ -59,3 +59,6 @@ gem "refile-mini_magick"
 gem 'devise'
 gem 'active_hash'
 
+#カレンダー機能
+gem "simple_calendar", "~> 2.0"
+
