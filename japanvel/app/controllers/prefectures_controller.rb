@@ -13,6 +13,6 @@ end
 
   private
    def prefecture_params
-     params.require(:prefecture).permit(:user_id, :image, :address, :point, :detail, :area_id)
+     params.require(:prefecture).permit(:user_id, :place_name, :image, :address, :point, :detail, :area_id)
    end
 end

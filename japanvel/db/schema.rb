@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2021_09_27_215947) do
   create_table "prefectures", force: :cascade do |t|
     t.integer "user_id"
     t.string "image_id"
+    t.string "place_name"
     t.string "address"
     t.text "point"
     t.string "detail"
