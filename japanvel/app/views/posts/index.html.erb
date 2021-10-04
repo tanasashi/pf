@@ -1,5 +1,5 @@
 投稿やさけー
-<%= form_with model:@prefecture, url:prefectures_path, method: :post, local:true do |f|  %>
+<%= form_with model:@post, url:posts_path, method: :post, local:true do |f|  %>
 
 場所<%= f.collection_select(:area_id, Area.all, :id, :name) %></br>
 

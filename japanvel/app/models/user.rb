@@ -8,8 +8,8 @@ class User < ApplicationRecord
    def active_for_authentication?
     super && (is_active == true)
    end
-   
-   has_many :prefectures, dependent: :destroy
+
+   has_many :posts, dependent: :destroy
 
 
 end

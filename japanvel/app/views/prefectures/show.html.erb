@@ -1,1 +1,8 @@
-ここに表示できたら理想
+<投稿について></br>
+
+ <% @posts.each do |post| %>
+   <%= attachment_image_tag post, :image, :fill, 300, 300 %></br>
+   場所名<%= post.place_name %></br>
+   住所<%= post.address %></br>
+   詳細<%= post.detail %></br>
+ <% end %>

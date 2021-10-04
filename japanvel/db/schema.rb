@@ -10,15 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_27_215947) do
+ActiveRecord::Schema.define(version: 2021_10_03_152751) do
 
-  create_table "prefectures", force: :cascade do |t|
+  create_table "posts", force: :cascade do |t|
     t.integer "user_id"
+    t.integer "area_id"
     t.string "image_id"
     t.string "place_name"
     t.string "address"
-    t.text "point"
     t.string "detail"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "prefectures", force: :cascade do |t|
+    t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
