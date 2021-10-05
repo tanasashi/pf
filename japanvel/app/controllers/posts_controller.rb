@@ -11,6 +11,16 @@ class PostsController < ApplicationController
     redirect_to prefecture_path(@post.area_id)
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    @post.update(post_params)
+      redirect_to prefecture_path(@post.area_id)
+  end
+
   private
    def post_params
      params.require(:post).permit(:user_id, :place_name, :image, :address, :detail, :area_id)

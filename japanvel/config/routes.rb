@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   patch 'users/mypage/withdrawl', to: 'users#withdrawl'
 
 
-  resources :posts, only: [:index, :create]
+  resources :posts, only: [:index, :create, :edit, :update, :destroy]
   resources :prefectures, only: [:show]
 
 
