@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root to: 'homes#top'
-
+  get 'bookmarks', to: 'homes#bookmarks'
 
   get 'users/mypage', to: 'users#show'
   patch 'users/mypage', to: 'users#update'
@@ -11,9 +11,10 @@ Rails.application.routes.draw do
   get 'users/mypage/verify', to: 'users#verify'
   patch 'users/mypage/withdrawl', to: 'users#withdrawl'
 
+  resources :posts, only: [:index, :create, :edit, :update, :destroy] do
+    resource :bookmarks, only: [:create, :destroy]
+  end
 
-  resources :posts, only: [:index, :create, :edit, :update, :destroy]
   resources :prefectures, only: [:show]
-
 
 end

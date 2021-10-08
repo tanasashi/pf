@@ -1,9 +1,9 @@
 編集画面
-<%= form_with model: @post, url:post_path, local:true do |f| %>
+<%= form_with model: @post, url:post_path(@post.id), method: :patch, local:true do |f| %>
      <%= f.attachment_field :image %></br>
    場所名<%= f.text_field :place_name %></br>
    住所<%= f.text_field :address %></br>
-   詳細<%= f.text_field :detail %></br>
+   詳細<%= f.text_area :detail, size: "35x10" %></br>
 
    <%= f.submit "更新する" %>
 <% end %>

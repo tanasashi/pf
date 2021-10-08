@@ -1,0 +1,10 @@
+  <strong>ブックマーク一覧</strong></br>
+
+    <% @bookmarks.each do |bookmark| %>
+      <tr>
+        <td>写真。<%= attachment_image_tag bookmark.post, :image, :fill, 300, 300 %></td></br>
+        <td>ユーザー名。<%= bookmark.post.user.name %></td></br>
+        <td>住所。<%= bookmark.post.address %></td></br>
+        <td>説明。<%= bookmark.post.detail %></td></br>
+      </tr>
+    <% end %>
