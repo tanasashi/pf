@@ -27,9 +27,15 @@ class PostsController < ApplicationController
       redirect_to prefecture_path(@post.area_id)
   end
 
+  def search
+    @posts = Post.search(params[:keyword])
+    @keyword = params[:keyword]
+    render "search"
+  end
+
   private
    def post_params
-     params.require(:post).permit(:user_id, :place_name, :image, :address, :detail, :area_id)
+     params.require(:post).permit(:user_id, :place_name, :image, :address, :detail, :area_id, :keyword)
    end
 
 

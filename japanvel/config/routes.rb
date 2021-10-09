@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'users/mypage/verify', to: 'users#verify'
   patch 'users/mypage/withdrawl', to: 'users#withdrawl'
 
+  get 'search', to: 'posts#search'
   resources :posts, only: [:index, :create, :edit, :update, :destroy] do
     resource :bookmarks, only: [:create, :destroy]
   end

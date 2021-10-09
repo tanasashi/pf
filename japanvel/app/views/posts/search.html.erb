@@ -1,0 +1,8 @@
+<div class="post-list">
+  <% @posts.each do |post| %>
+    <td>写真。<%= attachment_image_tag post, :image, :fill, 300, 300 %></td></br>
+    <td>住所。<%= post.address %></td></br>
+    <td>説明。<%= post.detail %></td></br>
+    <td>場所名。<%= post.place_name %></td></br>
+  <% end %>
+</div>

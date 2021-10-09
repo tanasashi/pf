@@ -30,6 +30,13 @@
         <%= link_to "ブックマーク", bookmarks_path %>
       </li>
 
+      <div class="search-form">
+        <%= form_with url: search_path, method: :get, local: true do |f| %>
+          <%= f.text_field :keyword, value: @keyword %>
+          <%= f.submit "検索する", name: nil %>
+        <% end %>
+      </div>
+
     <% else %>
     <li>
       <%= link_to "ログイン", new_user_session_path %>
