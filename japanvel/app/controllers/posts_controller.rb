@@ -7,8 +7,11 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
-    @post.save
-    redirect_to prefecture_path(@post.area_id)
+    if @post.save
+      redirect_to prefecture_path(@post.area_id)
+    else
+      render :index
+    end
   end
 
   def edit

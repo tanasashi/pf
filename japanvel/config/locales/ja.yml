@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    attributes:
+      post:
+        image: '写真'
+        place_name: '場所名'
+        address: '住所'
+        detail: '詳細'
+
+      user:
+        email: "メールアドレス"
+        encrypted_password: "パスワード"
+        name: "名前"

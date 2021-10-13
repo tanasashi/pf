@@ -1,11 +1,23 @@
-<h3>ユーザー情報</h3>
-
-<%= form_with model:@user, url:users_mypage_edit_path, local:true do |f|%>
-
-(USER NAME)<%= @user.name %></br>
-
-(Users Email)<%= @user.email %></br>
-
-<%= link_to "編集する", users_mypage_edit_path %>
-
-<% end %>
+<main>
+  <div class="col-sm-6">
+    <h3>ユーザー情報</h3>
+    <table class="table table-bordered">
+      <thead class="thead-light">
+        <tr>
+          <th>ニックネーム</th>
+          <th>メールアドレス</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= form_with model:@user, url:users_mypage_edit_path, local:true do |f|%>
+        <tr>
+          <th><%= @user.name %></th>
+          <th><%= @user.email %></th>
+          <th><%= link_to "編集する", users_mypage_edit_path, class: "btn btn-success" %></th>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</main>

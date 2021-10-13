@@ -1,9 +1,18 @@
-投稿やさけー
+投稿やさけー</br>
+
+<% if @post.errors.any? %>
+  <%= @post.errors.count %>件のエラーが発生
+  <% @post.errors.full_messages.each do |message| %>
+    <li><%= message %>
+  <% end %>
+<% end %>
+
 <%= form_with model:@post, url:posts_path, method: :post, local:true do |f|  %>
 
 場所<%= f.collection_select(:area_id, Area.all, :id, :name) %></br>
 
-画像<%= f.attachment_field :image %></br>
+画像<%= attachment_image_tag @post, :image, fallback: "no_image.jpg", id: "img_prev", style: "height: 150px; width: 150px;" %>
+<%= f.attachment_field :image %></br>
 
 場所名<%= f.text_field :place_name %></br>
 
@@ -14,3 +23,22 @@
 <%= f.submit "投稿する" %>
 
 <% end %>
+
+<script>
+$(document).on("turbolinks:load", function(){
+  function readURL(input) {
+    if(input.files && input.files[0]){
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        $('#img_prev').attr('src', e.target.result);
+      }
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+  //$("#post_post_image").change(function(){
+  $("input[type=file]").change(function(){
+    console.log("111");
+    readURL(this);
+  });
+});
+</script>

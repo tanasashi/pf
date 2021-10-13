@@ -5,6 +5,8 @@
    場所名<%= post.place_name %></br>
    住所<%= post.address %></br>
    詳細<%= post.detail %></br>
+   
+   
 
  <% if post.user == current_user %>
    <%= link_to "edit", edit_post_path(post) %>

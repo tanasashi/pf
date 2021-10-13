@@ -5,13 +5,16 @@ class UsersController < ApplicationController
   end
 
   def edit
-     @user = current_user
+    @user = current_user
   end
 
   def update
-     @user = current_user
-     @user.update(user_params)
-     redirect_to users_mypage_path
+    @user = current_user
+    if @user.update(user_params)
+      redirect_to users_mypage_path
+    else
+      render :edit
+    end
   end
 
   def verify
@@ -27,7 +30,7 @@ class UsersController < ApplicationController
 
   private
    def user_params
-     params.require(:user).permit(:name, :email, :password,)
+     params.require(:user).permit(:name, :email, :password)
    end
 
 end

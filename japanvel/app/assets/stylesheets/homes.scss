@@ -40,6 +40,10 @@ a:hover {
   visibility: hidden;
 }
 
+.top {
+	background-color: #C2EEFF;
+}
+
 
 /******* 地図成形 *******/
 #japan-map div div.area div {
@@ -71,7 +75,6 @@ a:hover {
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
-	background-color: #e0ffff;
 }
 #japan-map p.area-title {
 	display: none;
@@ -545,3 +548,7 @@ a:hover {
 
 
 } /* レスポンシブ max-500px */
+
+.h {
+	text-shadow: 3px 3px;
+}

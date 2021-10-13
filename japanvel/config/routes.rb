@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   root to: 'homes#top'
   get 'bookmarks', to: 'homes#bookmarks'
+  get 'about', to: 'homes#about'
 
   get 'users/mypage', to: 'users#show'
   patch 'users/mypage', to: 'users#update'
