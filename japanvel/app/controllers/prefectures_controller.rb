@@ -3,7 +3,7 @@ class PrefecturesController < ApplicationController
 
   def show
     @posts = Post.where(area_id: params[:id] )
-    
+    @area = Area.find(params[:id] )
   end
 
   private

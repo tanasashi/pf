@@ -4,27 +4,31 @@
       <%= message %>
     <% end %>
   <% end %>
-  <div class="col-sm-6">
-    <h3>編集画面</h3>
-    <table class="table table-bordered">
-      <thead class="thead-light">
-        <tr>
-          <th>ニックネーム</th>
-          <th>メールアドレス</th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <%= form_with model: @user, url:users_mypage_path, local:true do |f| %>
-        <tr>
-          <th><%= f.text_field :name %></th>
-          <th><%= f.text_field :email %></th>
-          <th><%= f.submit "更新する", class: "btn btn-primary" %></th>
-          <th><%= link_to "退会する", users_mypage_verify_path, class: "btn btn-danger" %></th>
-        </tr>
-        <% end %>
-      </tbody>
-    </table>
+  <div class="container">
+    <div class="alert alert-dark" role="alert">
+     <h3>編集画面 <i class="bi bi-arrow-bar-right"></i></h3>
+    </div>
+    <div class="col-sm-8">
+      <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th>ニックネーム</th>
+            <th>メールアドレス</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= form_with model: @user, url: users_mypage_path, local: true do |f| %>
+          <tr>
+            <th><%= f.text_field :name, class: "form-control" %></th>
+            <th><%= f.text_field :email, class: "form-control" %></th>
+            <th><%= f.submit "更新する", class: "btn btn-primary" %></th>
+            <th><%= link_to "退会する", users_mypage_verify_path, class: "btn btn-danger" %></th>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
   </div>
 </main>

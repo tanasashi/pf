@@ -9,5 +9,5 @@ ja:
 
       user:
         email: "メールアドレス"
-        encrypted_password: "パスワード"
+        password: "パスワード"
         name: "名前"

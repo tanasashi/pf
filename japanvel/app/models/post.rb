@@ -19,4 +19,5 @@ class Post < ApplicationRecord
     where(["address like? OR detail like? OR place_name like?", "%#{keyword}%", "%#{keyword}%", "%#{keyword}%"])
   end
 
+
 end

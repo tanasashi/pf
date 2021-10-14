@@ -8,17 +8,17 @@
 
         <div class="form-body p-4">
           <div class="mx-auto text-center">
+            <p><%= render "devise/shared/error_messages", resource: resource %></p></br>
             <p>メールアドレスと<br>パスワードを入力してください。</p>
           </div>
 
             <div class="new_user">
               <%= form_with model: @user, url: user_session_path, local: true do |f| %>
-              <%= render "devise/shared/error_messages", resource: resource %>
                 <div class="field"></br>
-                  <%= f.email_field :email, :size=>"45", autofocus: true, autocomplete: "email", placeholder: "メールアドレス" %>
+                  <%= f.email_field :email, :size=>"45", autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class: "form-control" %>
                 </div>
                 <div class="field"></br>
-                  <%= f.password_field :password, :size=>"45", autocomplete: "new-password", placeholder: "パスワード" %>
+                  <%= f.password_field :password, :size=>"45", autocomplete: "new-password", placeholder: "パスワード", class: "form-control" %>
                 </div>
                 <div class="field"></br>
                   <%= f.submit "ログイン", class: "btn btn-outline-secondary" %>

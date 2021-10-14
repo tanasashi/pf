@@ -1,23 +1,28 @@
 <main>
   <div class="container">
+    <div class="alert alert-dark" role="alert">
+     <h3>退会確認画面 <i class="bi bi-arrow-bar-right"></i></h3>
+    </div>
     <div class="row">
       <h1 class="px-3 mx-auto">
         <strong>本当に退会しますか?</strong></br>
       </h1>
     </div>
-      <div class="text-center">
-        退会しますと、投稿機能やブックマーク機能が</br>
-        使用できなくなります宜しいですか？</br>
-        退会する場合は【退会する】をクリックください。</br>
-        <%= link_to "退会しない", users_mypage_path, class: "btn btn-primary", data: { confirm: "削除してもよろしいですか？", cancel: "やめる", commit: "削除する"}, title: "削除の確認" %>
-        <%= link_to "退会する", users_mypage_withdrawl_path, method: :patch, class: "btn btn-danger" %>
-        </br>
-        </br>
+    <div class="text-center">
+      退会しますと、投稿機能やブックマーク機能が</br>
+      使用できなくなります宜しいですか？</br>
+      退会する場合は【退会する】をクリックください。</br>
+      <%= link_to "退会しない", users_mypage_path, class: "btn btn-primary" %>
+      <%= link_to "退会する", users_mypage_withdrawl_path, method: :patch, class: "btn btn-danger", data: { confirm: "退会してもよろしいですか？", cancel: "やめる", commit: "退会する"}, title: "削除の確認" %>
+      </br>
+      </br>
+      <span style="border-bottom: solid 1px red;">
         注意事項。</br>
         ※退会後は再度同じメールアドレスでログインは出来ません。</br>
         ※退会後はトップページに移動されます。</br>
-        </br>
-      </div>
+      </span>
+      </br>
+    </div>
   </div>
 </main>
 
