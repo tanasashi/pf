@@ -1,8 +1,44 @@
-<div class="post-list">
-  <% @posts.each do |post| %>
-    <td>写真。<%= attachment_image_tag post, :image, :fill, 300, 300 %></td></br>
-    <td>住所。<%= post.address %></td></br>
-    <td>説明。<%= post.detail %></td></br>
-    <td>場所名。<%= post.place_name %></td></br>
-  <% end %>
-</div>
+<main>
+  <div class="container">
+    <div class="alert alert-dark" role="alert">
+     <h3>検索結果 </h3>
+    </div>
+    <div class="album py-5">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <% @posts.each do |post| %>
+          <div class="col-md-4" %>
+            <div class="card md-4 shadow-sm">
+              <%= attachment_image_tag post, :image, :fill, 300, 300 %>
+              <div class="card body">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                  </li>
+                  <li class="list-group-item">
+                    場所名 <i class="fas fa-angle-double-right"><%= post.place_name %></i>
+                  </li>
+                  <li class="list-group-item">
+                    住所 <i class="fas fa-angle-double-right"><%= post.address %>></i>
+                  </li>
+                  <li class="list-group-item 3">
+                    詳細  <i class="fas fa-angle-double-right"><%= post.detail %></i>
+                  </li>
+                  <li class="list-group-item">
+                    投稿ユーザー名 <i class="fas fa-angle-double-right"><%= post.user.name %></i>
+                  </li>
+                </ul>
+                 <div class="btn-group">
+                  <% if post.bookmarked_by?(current_user) %>
+                    <%= link_to "ブックマークを外す", post_bookmarks_path(post), method: :delete, class: "btn btn-outline-dark" %></br>
+                    <% else %>
+                    <%= link_to "ブックマークに追加", post_bookmarks_path(post), method: :post, class: "btn btn-outline-dark" %></br>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+          </div>
+      </div>
+    </div>
+  </div>
+</main>

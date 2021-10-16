@@ -19,14 +19,14 @@
           </tr>
         </thead>
         <tbody>
-          <%= form_with model: @user, url: users_mypage_path, local: true do |f| %>
           <tr>
-            <th><%= f.text_field :name, class: "form-control" %></th>
-            <th><%= f.text_field :email, class: "form-control" %></th>
-            <th><%= f.submit "更新する", class: "btn btn-primary" %></th>
+            <%= form_with model: @user, url: users_mypage_path do |f| %>
+              <th><%= f.text_field :name, class: "form-control" %></th>
+              <th><%= f.text_field :email, class: "form-control" %></th>
+              <th><%= f.submit "更新する", class: "btn btn-primary" %></th>
+            <% end %>
             <th><%= link_to "退会する", users_mypage_verify_path, class: "btn btn-danger" %></th>
           </tr>
-          <% end %>
         </tbody>
       </table>
     </div>

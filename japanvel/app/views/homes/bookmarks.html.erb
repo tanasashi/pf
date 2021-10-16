@@ -1,36 +1,32 @@
 <main>
   <div class="container">
     <div class="alert alert-dark" role="alert">
-     <h3>ブックマーク一覧 <i class="bi bi-arrow-bar-right"></i></h3>
+     <h3>ブックマーク一覧 </h3>
     </div>
-  </div>
-  <div class="album py-5">
-    <div class="container">
+    <div class="album py-5">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <% @bookmarks.each do |bookmark| %>
           <div class="col">
             <div class="card shadow-sm">
-              <%= attachment_image_tag bookmark.post, :image, :fill, 100, 100 %>
+              <%= attachment_image_tag bookmark.post, :image, :fill, 300, 300 %>
                 <div class="cart-body">
-                  <p class="card-text"></p>
                   <ul class="list-group">
                     <li class="list-group-item">
                     </li>
                     <li class="list-group-item">
-                      場所名
-                      <i class="fas fa-angle-double-right"><%= bookmark.post.place_name %></i>
+                      <i class="fas fa-angle-double-right">投稿県の詳細</i>について
                     </li>
                     <li class="list-group-item">
-                      住所
-                      <i class="fas fa-angle-double-right"><%= bookmark.post.address %>></i>
+                      場所名 <i class="fas fa-angle-double-right"><%= bookmark.post.place_name %></i>
                     </li>
                     <li class="list-group-item">
-                      詳細
-                      <i class="fas fa-angle-double-right"><%= bookmark.post.detail %></i>
+                      住所 <i class="fas fa-angle-double-right"><%= bookmark.post.address %>></i>
                     </li>
                     <li class="list-group-item">
-                      投稿ユーザー名
-                      <i class="fas fa-angle-double-right"><%= bookmark.post.user.name %></i>
+                      詳細  <i class="fas fa-angle-double-right"><%= bookmark.post.detail %></i>
+                    </li>
+                    <li class="list-group-item">
+                      投稿ユーザー名 <i class="fas fa-angle-double-right"><%= bookmark.post.user.name %></i>
                     </li>
                     <li class="list-group-item">
                     </li>
