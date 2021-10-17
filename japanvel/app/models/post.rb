@@ -16,8 +16,11 @@ class Post < ApplicationRecord
   end
 
   def self.search(keyword)
-    where(["address like? OR detail like? OR place_name like?", "%#{keyword}%", "%#{keyword}%", "%#{keyword}%"])
+    if keyword.present?
+      where(["address like? OR detail like? OR place_name like?", "%#{keyword}%", "%#{keyword}%", "%#{keyword}%"])
+    else
+      []
+    end
   end
-
 
 end

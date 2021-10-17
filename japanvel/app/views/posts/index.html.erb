@@ -20,7 +20,7 @@
       </dt>
       <dt class="col-sm-8">
         <div class="py-2">
-          場所(都道府県) <%= f.collection_select :area_id, Area.all, :id, :name,class: "form-select" %>
+          場所(都道府県) <%= f.collection_select :area_id, Area.all, :id, :name, {prompt: true }, class: "form-control" %>
         </div>
         <div class="py-2">
           場所名 <%= f.text_field :place_name, class: "form-control mr-sm-2", placeholder: "場所名を記入" %>
@@ -58,3 +58,5 @@ $(document).on("turbolinks:load", function(){
 });
 </script>
 
+mysql -u root -p -h rds-mysql-server.c3qznki53wbf.ap-northeast-1.rds.amazonaws.com
+ssh -i ~/.ssh/practice-aws.pem ec2-user@54.249.115.151
