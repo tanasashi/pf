@@ -60,3 +60,10 @@ if Rails.env.production?
   # デーモン
   daemonize
 end
+
+
+sh -i ~/.ssh/practice-aws.pem ec2-user@54.249.115.151
+
+ scp -i ~/.ssh/practice-aws.pem config/master.key ec2-user@54.249.115.151:pf/config
+ 
+ scp -i ~/.ssh/practice-aws.pem config/master.key ec2-user@54.249.115.151:pf/config
