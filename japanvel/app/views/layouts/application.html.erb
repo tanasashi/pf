@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>Japanvel</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -23,7 +24,7 @@
                 <%= f.text_field :keyword, value: @keyword, class: "form-control mr-sm-2", placeholder: "キーワード検索", style:"display:inline-block; width:60%" %>
                 <%= f.submit "検索する", name: nil, class: "btn btn-secondary my-2 my-sm-0" %>
             <% end %>
-              <li><%= link_to "ユーザー情報", users_mypage_path, class: 'fas fa-user-cog nav-link text-light' %></li>
+              <li><%= link_to "ユーザー情報・設定", users_mypage_path, class: 'fas fa-user-cog nav-link text-light' %></li>
               <li><%= link_to "投稿する", posts_path, class: 'fas fa-reply nav-link text-light' %></li>
               <li><%= link_to "ブックマーク", bookmarks_path, class: 'fas fa-bookmark nav-link text-light' %></li>
               <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'fas fa-sign-out-alt nav-link text-light'%></li>

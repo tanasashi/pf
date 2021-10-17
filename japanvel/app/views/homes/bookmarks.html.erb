@@ -31,12 +31,8 @@
                     <li class="list-group-item">
                     </li>
                   </ul>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="text-center">
-                      <div class="btn-group">
-                        <%= link_to "ブックマークを外す", post_bookmarks_path(bookmark.post), method: :delete, class: "btn btn-outline-dark" %>
-                      </div>
-                    </div>
+                  <div class="btn-group">
+                    <%= link_to "ブックマークを外す", post_bookmarks_path(bookmark.post), method: :delete, class: "btn btn-outline-dark" %></br>
                   </div>
                 </div>
             </div>
