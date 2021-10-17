@@ -1,24 +1,39 @@
-# README
+# iapanvel
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+このサイトでは日本全国の観光地の情報について知ることができます！
+ログインしますと自分で観光地の情報を投稿することもでき、日本地図から行きたい地方の写真をクリックしますと他のユーザーが投稿した行きたい地方の情報を見ることができます。
+再度見たい情報が御座いましたらブックマークも可能です。
 
-Things you may want to cover:
+### サイトテーマ
+観光地の予習がバッチリできる観光地共有投稿サイト！
 
-* Ruby version
+### テーマを選んだ理由
+現在、コロナ渦で気軽に旅行に行ける状況ではありません。
+旅行に行きたくても行けない人に向けて旅行に行った気分になってもらえるようなサイトや、
+コロナが収束し人の目を気にしないで観光ができる日の為に、旅行先を探せるサイトがあれば現在苦境の観光業者にも有益だと思いました。
+私も旅行が好きで、定番の観光地、隠れ家的な観光地問わず発見できるサイトが欲しいと思い、このサイトを思いつきました
 
-* System dependencies
+### ターゲットユーザ
+旅行好きな方。
+一味違う観光地を探したい方。
+日本の色々な観光地の写真が見たい方。
+コロナ収束後に行きたいところが決まっている方
 
-* Configuration
+### 主な利用シーン
+初めて行く都道府県で知る人ぞ知る場所に行きたい時。
+コロナ後観光したい場所が決まっており、その観光場所の情報について先知りたい時。
 
-* Database creation
+## 設計書
+※まだ
 
-* Database initialization
+## チャレンジ要素一覧
+https://docs.google.com/spreadsheets/d/1nUfLXZU5jf-o4bWw0IXxXA1JJM86wqYX0ebtyN3L86I/edit?usp=sharing
 
-* How to run the test suite
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
