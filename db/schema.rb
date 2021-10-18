@@ -13,14 +13,10 @@
 ActiveRecord::Schema.define(version: 2021_10_06_141922) do
 
   create_table "bookmarks", force: :cascade do |t|
-    t.bigint "user"
-    t.bigint "post"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "post_id"
-    t.index ["post_id"], name: "index_bookmarks_on_post_id"
-    t.index ["user_id"], name: "index_bookmarks_on_user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "posts", force: :cascade do |t|
