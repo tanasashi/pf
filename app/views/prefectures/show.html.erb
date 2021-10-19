@@ -42,7 +42,7 @@
                         <% if post.bookmarked_by?(current_user) %>
                           <%= link_to "ブックマークを外す", post_bookmarks_path(post), method: :delete, class: "btn btn-outline-dark" %></br>
                           <% else %>
-                          <%= link_to "ブックマークに追加", post_bookmarks_path(post), method: :post, class: "btn btn-outline-dark" %></br>
+                          <%= link_to "ブックマークに追加", post_bookmarks_path(post), method: :post, class: "btn btn-outline-secondary" %></br>
                         <% end %>
                       <% end %>
                     </div>

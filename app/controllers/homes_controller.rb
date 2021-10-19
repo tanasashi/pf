@@ -7,7 +7,7 @@ class HomesController < ApplicationController
   end
 
   def bookmarks
-    @bookmarks = Bookmark.where(user_id: current_user.id)
+    @bookmarks = Bookmark.where(user_id: current_user.id).order(created_at: "DESC")
     @posts = Post.where(area_id: params[:id] )
   end
 

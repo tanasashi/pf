@@ -61,15 +61,13 @@ gem 'devise'
 gem 'active_hash'
 gem 'font-awesome-sass', '~> 5.13'
 
-#カレンダー機能
-gem "simple_calendar", "~> 2.0"
 
 gem 'bootstrap', '~> 4.5'
-# gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'data-confirm-modal'
 gem 'rails-i18n'
+gem 'devise-i18n'
 
 
 
