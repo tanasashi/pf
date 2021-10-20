@@ -14,7 +14,7 @@
                     <li class="list-group-item">
                     </li>
                     <li class="list-group-item">
-                      <i class="fas fa-angle-double-right"><%= bookmark.post.area_id %></i>について
+                      <i class="fas fa-angle-double-right"><%= link_to Area.find(bookmark.post.area_id).name, prefecture_path(bookmark.post.area_id) %></i>について
                     </li>
                     <li class="list-group-item">
                       場所名 <i class="fas fa-angle-double-right"><%= bookmark.post.place_name %></i>
@@ -38,8 +38,9 @@
             </div>
           </div>
         <% end %>
-       <%= paginate @bookmarks %>
+
       </div>
+      <%= paginate @bookmarks %>
     </div>
   </div>
 </main>

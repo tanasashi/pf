@@ -14,6 +14,9 @@
                   <li class="list-group-item">
                   </li>
                   <li class="list-group-item">
+                    <i class="fas fa-angle-double-right"><%= Area.find(post.area_id).name %></i>について
+                  </li>
+                  <li class="list-group-item">
                     場所名 <i class="fas fa-angle-double-right"><%= post.place_name %></i>
                   </li>
                   <li class="list-group-item">
@@ -42,3 +45,7 @@
     </div>
   </div>
 </main>
+
+
+<!--User.joins(:posts)-->
+<!--SELECT `users`.* FROM `users` INNER JOIN `posts` ON `posts`.`user_id` = `users`.`id`-->
