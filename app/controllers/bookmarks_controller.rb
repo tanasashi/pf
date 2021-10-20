@@ -22,4 +22,9 @@ class BookmarksController < ApplicationController
     end
   end
 
+  def index
+    @bookmarks = Bookmark.where(user_id: current_user.id).order(created_at: "DESC").page(params[:page]).per(6)
+    # @posts = Post.where(area_id: params[:id] )
+  end
+
 end

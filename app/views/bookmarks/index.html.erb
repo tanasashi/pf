@@ -14,7 +14,7 @@
                     <li class="list-group-item">
                     </li>
                     <li class="list-group-item">
-                      <i class="fas fa-angle-double-right">投稿県の詳細</i>について
+                      <i class="fas fa-angle-double-right"><%= bookmark.post.area_id %></i>について
                     </li>
                     <li class="list-group-item">
                       場所名 <i class="fas fa-angle-double-right"><%= bookmark.post.place_name %></i>
@@ -32,12 +32,13 @@
                     </li>
                   </ul>
                   <div class="btn-group">
-                    <%= link_to "ブックマークを外す", post_bookmarks_path(bookmark.post), method: :delete, class: "btn btn-outline-dark" %></br>
+                    <%= link_to "ブックマークを外す", post_bookmarks_path(bookmark.post), method: :delete, class: "btn btn-outline-danger" %></br>
                   </div>
                 </div>
             </div>
           </div>
         <% end %>
+       <%= paginate @bookmarks %>
       </div>
     </div>
   </div>

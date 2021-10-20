@@ -68,6 +68,7 @@ gem 'jquery-ui-rails'
 gem 'data-confirm-modal'
 gem 'rails-i18n'
 gem 'devise-i18n'
+gem 'kaminari'
 
 
 

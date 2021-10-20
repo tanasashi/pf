@@ -9,7 +9,11 @@
         <div class="form-body p-4">
           <p>名前とメールアドレスと<br>パスワードを入力してください。</p>
           <div class="mx-auto text-center">
-            <p><%= render "devise/shared/error_messages", resource: resource %></p></br>
+            <p>
+              <font color="red">
+                <%= render "devise/shared/error_messages", resource: resource %>
+              </font>
+            </p>
           </div>
             <div class="new_user">
               <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>

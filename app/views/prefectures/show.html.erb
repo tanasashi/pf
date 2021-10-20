@@ -40,9 +40,9 @@
                     <div class="btn-group">
                       <% if user_signed_in? %>
                         <% if post.bookmarked_by?(current_user) %>
-                          <%= link_to "ブックマークを外す", post_bookmarks_path(post), method: :delete, class: "btn btn-outline-dark" %></br>
+                          <%= link_to "ブックマークを外す", post_bookmarks_path(post), method: :delete, class: "btn btn-outline-danger" %></br>
                           <% else %>
-                          <%= link_to "ブックマークに追加", post_bookmarks_path(post), method: :post, class: "btn btn-outline-secondary" %></br>
+                          <%= link_to "ブックマークに追加する", post_bookmarks_path(post), method: :post, class: "btn btn-outline-primary" %></br>
                         <% end %>
                       <% end %>
                     </div>
