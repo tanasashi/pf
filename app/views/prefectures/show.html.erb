@@ -1,7 +1,7 @@
 <main>
   <div class="container">
     <div class="alert alert-dark" role="alert">
-     <h3><%= @area.name %>の投稿一覧</h3>
+     <h3 class="text-center"><%= @area.name %>の投稿一覧</h3>
     </div>
   </div>
   <div class="album py-5">
@@ -17,14 +17,13 @@
                     </li>
                     <li class="list-group-item">
                       場所名
-                      <i class="fas fa-angle-double-right"><%= post.place_name %></i>
-                    </li>
+                      <i class="fas fa-angle-double-right"></i><%= post.place_name %>
                     <li class="list-group-item">
                       住所
-                      <i class="fas fa-angle-double-right"><%= post.address %></i>
+                      <i class="fas fa-angle-double-right"></i><%= post.address %>
                     </li>
                     <li class="list-group-item">
-                      詳細
+                      詳細</br>
                       <i class="fas fa-angle-double-right"></i><%= post.detail %>
                     </li>
                     <li class="list-group-item">

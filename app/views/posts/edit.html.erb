@@ -19,8 +19,8 @@
         </div>
       </dt>
       <dt class="col-sm-8">
-                <div class="py-2">
-          場所(都道府県) <%= f.collection_select :area_id, Area.all, :id, :name,class: "form-select" %>
+        <div class="py-2">
+          場所(都道府県) <%= f.collection_select :area_id, Area.all, :id, :name, {prompt: true }, class: "form-control" %>
         </div>
         <div class="py-2">
           場所名 <%= f.text_field :place_name, class: "form-control mr-sm-2", placeholder: "場所名を記入" %>
@@ -39,3 +39,22 @@
     <% end %>
   </div>
 </main>
+
+<script>
+$(document).on("turbolinks:load", function(){
+  function readURL(input) {
+    if(input.files && input.files[0]){
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        $('#img_prev').attr('src', e.target.result);
+      }
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+  //$("#post_post_image").change(function(){
+  $("input[type=file]").change(function(){
+    console.log("111");
+    readURL(this);
+  });
+});
+</script>

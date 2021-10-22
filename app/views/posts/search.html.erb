@@ -1,7 +1,7 @@
 <main>
   <div class="container">
     <div class="alert alert-dark" role="alert">
-     <h3>検索結果 </h3>
+     <h3 class="text-center">検索結果 </h3>
     </div>
     <div class="album py-5">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -14,19 +14,23 @@
                   <li class="list-group-item">
                   </li>
                   <li class="list-group-item">
-                    <i class="fas fa-angle-double-right"><%= Area.find(post.area_id).name %></i>について
+                    <%= Area.find(post.area_id).name %>の情報
                   </li>
                   <li class="list-group-item">
-                    場所名 <i class="fas fa-angle-double-right"><%= post.place_name %></i>
+                    場所名
+                    <i class="fas fa-angle-double-right"></i><%= post.place_name %>
                   </li>
                   <li class="list-group-item">
-                    住所 <i class="fas fa-angle-double-right"><%= post.address %>></i>
+                    住所
+                    <i class="fas fa-angle-double-right"></i><%= post.address %>
                   </li>
                   <li class="list-group-item 3">
-                    詳細  <i class="fas fa-angle-double-right"><%= post.detail %></i>
+                    詳細</br>
+                    <i class="fas fa-angle-double-right"></i><%= post.detail %>
                   </li>
                   <li class="list-group-item">
-                    投稿ユーザー名 <i class="fas fa-angle-double-right"><%= post.user.name %></i>
+                    投稿ユーザー名
+                    <i class="fas fa-angle-double-right"></i><%= post.user.name %>
                   </li>
                 </ul>
                  <div class="btn-group">

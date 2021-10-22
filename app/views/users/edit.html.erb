@@ -6,9 +6,9 @@
   <% end %>
   <div class="container">
     <div class="alert alert-dark" role="alert">
-     <h3>編集画面 <i class="bi bi-arrow-bar-right"></i></h3>
+     <h3 class="text-center">編集画面</h3>
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-9">
       <table class="table table-bordered">
         <thead class="thead-light">
           <tr>
@@ -25,7 +25,7 @@
               <th><%= f.text_field :email, class: "form-control" %></th>
               <th><%= f.submit "更新する", class: "btn btn-primary" %></th>
             <% end %>
-            <th><%= link_to "退会する", users_mypage_verify_path, class: "btn btn-danger" %></th>
+            <th><%= link_to "退会画面へ", users_mypage_verify_path, class: "btn btn-danger" %></th>
           </tr>
         </tbody>
       </table>

@@ -1,7 +1,7 @@
 <main>
   <div class="container">
     <div class="alert alert-dark" role="alert">
-     <h3>ユーザー情報 </h3>
+     <h3 class="text-center">ユーザー情報 </h3>
     </div>
     <div class="col-sm-8">
       <table class="table table-bordered">
@@ -13,10 +13,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th><%= @user.name %></th>
-            <th><%= @user.email %></th>
-            <th><%= link_to "編集する", users_mypage_edit_path, class: "btn btn-success", data: {"turbolinks" => false} %></th>
+          <tr><p >
+            <td><%= @user.name %></td>
+            <td><%= @user.email %></td>
+            <td><%= link_to "編集する", users_mypage_edit_path, class: "btn btn-success", data: {"turbolinks" => false} %></td>
           </tr>
         </tbody>
       </table>
