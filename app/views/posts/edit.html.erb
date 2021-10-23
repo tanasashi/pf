@@ -1,7 +1,7 @@
 <main>
   <div class="container">
     <div class="alert alert-dark" role="alert">
-      <h3>編集画面</h3>
+      <h3 class="text-center">編集画面</h3>
     </div>
     <% if @post.errors.any? %>
       <%= @post.errors.count %>件のエラーが発生
@@ -32,7 +32,7 @@
           詳細 <%= f.text_area :detail, class: "form-control mr-sm-2", placeholder: "詳細を記入" %>
         </div>
         <div class="col-md-2 col-md-offset-5">
-          <%= f.submit "投稿する", class: "btn btn-primary" %>
+          <%= f.submit "更新する", class: "btn btn-primary" %>
         </div>
       </dt>
     </div>

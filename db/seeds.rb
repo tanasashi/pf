@@ -7,5 +7,38 @@ Post.create!(
   detail: '北海道でで5番目に広い公園です。'
 )
 
+Post.create!(
+  user_id: 3,
+  area_id: 2,
+  image: File.open("./app/assets/images/image0.jpg"),
+  place_name: '公園',
+  address: '札幌市111',
+  detail: '北海道でで5番目に広い公園です。'
+)
 
+Post.create!(
+  user_id: 3,
+  area_id: 3,
+  image: File.open("./app/assets/images/image0.jpg"),
+  place_name: '公園',
+  address: '札幌市111',
+  detail: '北海道でで5番目に広い公園です。'
+)
 
+Post.create!(
+  user_id: 3,
+  area_id: 4,
+  image: File.open("./app/assets/images/image0.jpg"),
+  place_name: '公園',
+  address: '札幌市111',
+  detail: '北海道でで5番目に広い公園です。'
+)
+
+Post.create!(
+  user_id: 3,
+  area_id: 5,
+  image: File.open("./app/assets/images/image0.jpg"),
+  place_name: '公園',
+  address: '札幌市111',
+  detail: '北海道でで5番目に広い公園です。'
+)
