@@ -552,3 +552,62 @@ a:hover {
 .h {
 	text-shadow: 3px 3px;
 }
+
+
+// aboutページについて
+#container-about{
+	height: 500px;
+	width: 700px;
+	float: left;
+	padding: 30px;
+}
+
+.image1 {
+	background-image: image-url("image1.jpg");
+	background-size: auto;
+}
+.image2 {
+	background-image: image-url("image2.jpg");
+	background-size: auto;
+}
+.image3 {
+	background-image: image-url("image3.jpg");
+	background-size: auto;
+}
+.image4 {
+	background-image: image-url("image4.jpg");
+	background-size: auto;
+}
+.image5 {
+	background-image: image-url("image5.jpg");
+	background-size: auto;
+}
+.image6 {
+	background-image: image-url("image6.jpg");
+	background-size: auto;
+}
+.image7 {
+	background-image: image-url("image7.jpg");
+	background-size: auto;
+}
+.image8 {
+	background-image: image-url("image8.jpg");
+	background-size: auto;
+}
+.image9 {
+	background-image: image-url("image9.jpg");
+	background-size: auto;
+}
+.image10 {
+	background-image: image-url("image10.jpg");
+	background-size: auto;
+}
+
+
+.inner {
+	margin-top: 20px;
+}
+.span {
+	display: inline-block;
+	padding: 100px;
+}

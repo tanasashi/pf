@@ -16,7 +16,7 @@
         写真</br>
           <%= attachment_image_tag @post, :image, fallback: "no_image.jpg", id: "img_prev", style: "height: 300px; width: 300px;" %></br>
           <%= f.file_field :image, class: "form-control-file", "data-buttonText": "ファイル選択" %>
-        </div>
+        </div>FF
       </dt>
       <dt class="col-sm-8">
         <div class="py-2">
@@ -26,7 +26,7 @@
           場所名 <%= f.text_field :place_name, class: "form-control mr-sm-2", placeholder: "場所名を記入" %>
         </div>
         <div class="py-2">
-          住所 <%= f.text_field :address, class: "form-control mr-sm-2", placeholder: "例；〇〇市〇〇町〇〇と記入" %>
+          住所 <%= f.text_field :address, class: "form-control mr-sm-2", placeholder: "例：大阪市浪速区と記入" %>
         </div>
         <div class="py-2">
           詳細 <%= f.text_area :detail, class: "form-control mr-sm-2", placeholder: "詳細を記入" %>
