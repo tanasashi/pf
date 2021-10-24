@@ -16,7 +16,10 @@
           <tr><p >
             <td><%= @user.name %></td>
             <td><%= @user.email %></td>
-            <td><%= link_to "編集する", users_mypage_edit_path, class: "btn btn-success", data: {"turbolinks" => false} %></td>
+            <% if user_signed_in? && current_user.id == 12 %>
+            <% else %>
+              <td><%= link_to "編集する", users_mypage_edit_path, class: "btn btn-success", data: {"turbolinks" => false} %></td>
+            <% end %>
           </tr>
         </tbody>
       </table>
