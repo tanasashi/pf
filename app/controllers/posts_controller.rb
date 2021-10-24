@@ -8,7 +8,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     if @post.save
-      redirect_to prefecture_path(@post.area_id)
+      redirect_to prefecture_path(@post.area_id), notice: '投稿が完了しました'
     else
       render :index
     end
@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      redirect_to prefecture_path(@post.area_id)
+      redirect_to prefecture_path(@post.area_id), notice: '更新が完了しました'
     else
       render :edit
     end
@@ -30,7 +30,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-      redirect_to prefecture_path(@post.area_id)
+      redirect_to prefecture_path(@post.area_id), notice: '削除が完了しました'
   end
 
   def search

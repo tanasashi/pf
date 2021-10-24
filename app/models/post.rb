@@ -7,6 +7,7 @@ class Post < ApplicationRecord
   attachment :image
 
   validates :image, presence: true
+  validates :area_id, presence: true
   validates :place_name, presence: true
   validates :address, presence: true
   validates :detail, presence: true

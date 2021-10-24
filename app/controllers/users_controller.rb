@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @user.update(user_params)
-      redirect_to users_mypage_path
+      redirect_to users_mypage_path, notice: '更新が完了しました'
     else
       render :edit
     end
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     @user = current_user
     @user.update(is_active: false)
     reset_session
-    redirect_to root_path
+    redirect_to root_path, notice: '退会が完了しました'
   end
 
   private

@@ -4,22 +4,15 @@ class BookmarksController < ApplicationController
   def create
     @post = Post.find(params[:post_id])
     bookmark = @post.bookmarks.new(user_id: current_user.id)
-    if bookmark.save
-      redirect_to request.referer
-    else
-      redirect_to request.referer
-    end
+    bookmark.save
+      redirect_to request.referer, notice: 'ブックマークに追加されました'
   end
 
   def destroy
     @post = Post.find(params[:post_id])
     bookmark = @post.bookmarks.find_by(user_id: current_user.id)
-    if bookmark.present?
-      bookmark.destroy
-      redirect_to request.referer
-    else
-      redirect_to request.referer
-    end
+    bookmark.destroy
+      redirect_to request.referer, notice: 'ブックマークを外しました'
   end
 
   def index

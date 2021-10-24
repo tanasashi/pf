@@ -28,6 +28,7 @@ ja:
         updated_at: 更新日
       post:
         image: 写真
+        area_id: 都道府県名
         place_name: 場所名
         address: 住所
         detail: 詳細
