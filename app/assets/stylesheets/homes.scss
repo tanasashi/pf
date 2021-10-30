@@ -42,6 +42,11 @@ a:hover {
 	min-height: 100vh;
 }
 
+.title {
+margin-bottom: 40px;
+background: #c2edff;/*背景色*/
+padding: 0.5em;/*文字まわり（上下左右）の余白*/
+}
 
 /******* 地図成形 *******/
 #japan-map div div.area div {
