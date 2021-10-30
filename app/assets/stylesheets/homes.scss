@@ -567,6 +567,7 @@ padding: 0.5em;/*文字まわり（上下左右）の余白*/
 	padding: 30px;
 }
 
+.theTarget [
 .image1 {
 	background-image: image-url("image1.jpg");
 	background-size: auto;
@@ -607,7 +608,7 @@ padding: 0.5em;/*文字まわり（上下左右）の余白*/
 	background-image: image-url("image10.jpg");
 	background-size: auto;
 }
-
+]
 
 .inner {
 	margin-top: 20px;
