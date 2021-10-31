@@ -34,7 +34,8 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Post.search(params[:keyword]).page(params[:page]).per(6)
+    @posts = Post.search(params[:keyword])
+    @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(6)
     @keyword = params[:keyword]
     render "search"
   end
