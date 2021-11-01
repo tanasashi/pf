@@ -25,7 +25,7 @@
                     <i class="fas fa-angle-double-right"></i><%= post.address %>
                   </li>
                   <li class="list-group-item 3">
-                    詳細</br>
+                    詳細<br>
                     <i class="fas fa-angle-double-right"></i><%= post.detail %>
                   </li>
                   <li class="list-group-item">
@@ -34,10 +34,11 @@
                   </li>
                 </ul>
                  <div class="btn-group">
-                  <% if post.bookmarked_by?(current_user) %>
-                    <%= link_to "ブックマークを外す", post_bookmarks_path(post), method: :delete, class: "btn btn-outline-danger" %></br>
+                  <% if user_signed_in? && current_user.email == "guest@gst.com" %>
+                  <% elsif post.bookmarked_by?(current_user) %>
+                    <%= link_to "ブックマークを外す", post_bookmarks_path(post), method: :delete, class: "btn btn-outline-danger" %><br>
                       <% else %>
-                    <%= link_to "ブックマークに追加する", post_bookmarks_path(post), method: :post, class: "btn btn-outline-primary" %></br>
+                    <%= link_to "ブックマークに追加する", post_bookmarks_path(post), method: :post, class: "btn btn-outline-primary" %><br>
                   <% end %>
                 </div>
               </div>

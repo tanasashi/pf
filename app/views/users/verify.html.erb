@@ -7,22 +7,22 @@
       <%= image_tag '15073.png', :size => '100x100', style:"display: block; margin: auto;" %>
     </div>
     <h1 class="px-3 mx-auto text-center">
-        <strong>本当に退会しますか?</strong></br>
+        <strong>本当に退会しますか?</strong><br>
       </h1>
     </div>
     <div class="text-center">
-      退会しますと、投稿機能やブックマーク機能が</br>
-      使用できなくなります宜しいですか？</br>
-      退会する場合は【退会する】をクリックください。</br>
-      <%= link_to "退会する", users_mypage_withdrawl_path, method: :patch, class: "btn btn-danger btn-lg", data: { confirm: "退会してもよろしいですか？", cancel: "やめる", commit: "退会する"}, title: "削除の確認" %></br>
-      </br>
-      <%= link_to "ユーザー情報一覧・編集画面に戻る", users_mypage_path %></br>
+      退会しますと、投稿機能やブックマーク機能が<br>
+      使用できなくなります宜しいですか？<br>
+      退会する場合は【退会する】をクリックください。<br>
+      <%= link_to "退会する", users_mypage_withdrawl_path, method: :patch, class: "btn btn-danger btn-lg", data: { confirm: "退会してもよろしいですか？", cancel: "やめる", commit: "退会する"}, title: "削除の確認" %><br>
+      <br>
+      <%= link_to "ユーザー情報一覧・編集画面に戻る", users_mypage_path %><br>
       <span style="border-bottom: solid 1px red;">
-        注意事項。</br>
-        ※退会後はトップページに移動されます。</br>
-        ※退会後は再度同じメールアドレスでログインは出来ません。</br>
+        注意事項。<br>
+        ※退会後はトップページに移動されます。<br>
+        ※退会後は再度同じメールアドレスでログインは出来ません。<<br>
       </span>
-      </br>
+      <br>
     </div>
   </div>
 </main>

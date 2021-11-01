@@ -13,8 +13,8 @@
     <div class="row alert bg-light">
       <dt class="col-sm-4">
         <div class="field">
-        写真</br>
-          <%= attachment_image_tag @post, :image, fallback: "no_image.jpg", id: "img_prev", style: "height: 250px; width: 250px;" %></br>
+        写真<br>
+          <%= attachment_image_tag @post, :image, fallback: "no_image.jpg", id: "img_prev", style: "height: 250px; width: 250px;" %><br>
           <%= f.attachment_field :image %>
         </div>
       </dt>

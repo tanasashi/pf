@@ -23,7 +23,7 @@
                       住所 <i class="fas fa-angle-double-right"></i><%= bookmark.post.address %>>
                     </li>
                     <li class="list-group-item">
-                      詳細</br>
+                      詳細<br>
                       <i class="fas fa-angle-double-right"></i><%= bookmark.post.detail %>
                     </li>
                     <li class="list-group-item">
@@ -32,7 +32,7 @@
                     </li>
                   </ul>
                   <div class="btn-group">
-                    <%= link_to "ブックマークを外す", post_bookmarks_path(bookmark.post), method: :delete, class: "btn btn-outline-danger" %></br>
+                    <%= link_to "ブックマークを外す", post_bookmarks_path(bookmark.post), method: :delete, class: "btn btn-outline-danger" %><br>
                   </div>
                 </div>
             </div>
