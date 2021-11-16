@@ -559,11 +559,25 @@ border-bottom: solid 3px #454F44;/*下線*/
 
 
 // aboutページについて
+.spell {
+	font-family: cursive;
+	font-size: 7ex;
+}
+
 #container-about{
-	height: 500px;
-	width: 630px;
-	float: left;
-	padding: 30px;
+	display: block;
+    margin:auto;
+   	height: 500px;
+	width: 700px;
+	// float: left;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.theTarget {
+	display: block;
+    margin:auto;
+
 }
 
 .image1 {
@@ -615,7 +629,3 @@ border-bottom: solid 3px #454F44;/*下線*/
 	padding: 100px;
 }
 
-// abouter
-.fh5co-intro-section {
-	padding-top: 10px;
-}
