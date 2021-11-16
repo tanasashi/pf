@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root to: 'homes#top'
   post '/homes/guest_sign_in', to: 'homes#guest_sign_in'
   get 'about', to: 'homes#about'
+  get 'abouter', to: 'homes#abouter'  
 
   get 'users/mypage', to: 'users#show'
   patch 'users/mypage', to: 'users#update'

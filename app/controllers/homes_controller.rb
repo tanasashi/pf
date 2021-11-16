@@ -3,8 +3,12 @@ class HomesController < ApplicationController
   def top
   end
 
-  def abput
+  def about
   end
+
+  def abouter
+  end
+
 
   def guest_sign_in
     user = User.find_or_create_by!(name: 'guest', email: 'guest@gst.com') do |user|
