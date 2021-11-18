@@ -567,9 +567,8 @@ border-bottom: solid 3px #454F44;/*下線*/
 #container-about{
 	display: block;
     margin:auto;
-   	height: 500px;
-	width: 700px;
-	// float: left;
+   	height: 600px;
+	  width: 800px;
 	border-radius: 10px;
 	overflow: hidden;
 }
@@ -577,13 +576,9 @@ border-bottom: solid 3px #454F44;/*下線*/
 .theTarget {
 	display: block;
     margin:auto;
-
+    position: relative;
 }
 
-.image1 {
-	background-image: image-url("image1.jpg");
-	background-size: auto;
-}
 .image2 {
 	background-image: image-url("image2.jpg");
 	background-size: auto;
@@ -596,31 +591,6 @@ border-bottom: solid 3px #454F44;/*下線*/
 	background-image: image-url("image4.jpg");
 	background-size: auto;
 }
-.image5 {
-	background-image: image-url("image5.jpg");
-	background-size: auto;
-}
-.image6 {
-	background-image: image-url("image6.jpg");
-	background-size: auto;
-}
-.image7 {
-	background-image: image-url("image7.jpg");
-	background-size: auto;
-}
-.image8 {
-	background-image: image-url("image8.jpg");
-	background-size: auto;
-}
-.image9 {
-	background-image: image-url("image9.jpg");
-	background-size: auto;
-}
-.image10 {
-	background-image: image-url("image10.jpg");
-	background-size: auto;
-}
-
 .inner {
 	margin-top: 20px;
 }
@@ -637,3 +607,13 @@ border-bottom: solid 3px #454F44;/*下線*/
 .li {
 	padding: 10px;
 }
+
+.texter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  }
