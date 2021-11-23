@@ -19,7 +19,7 @@
           <%= f.file_field :image, class: "form-control-file", "data-buttonText": "ファイル選択" %>
         </div>
       </dt>
-      <dt class="col-sm-8">
+      <dt class="col-sm-10">
         <div class="py-2">
           場所(都道府県) <%= f.collection_select :area_id, Area.all, :id, :name, {prompt: true }, class: "form-control" %>
         </div>
@@ -33,7 +33,7 @@
           詳細 <%= f.text_area :detail, class: "form-control mr-sm-2", placeholder: "詳細を記入" %>
         </div>
         <% if user_signed_in? %>
-        <div class="col-md-2 col-md-offset-5">
+        <div class="btn.btn-info.mx-auto">
           <%= f.submit "投稿する", class: "btn btn-success btn-lg" %>
         </div>
         <% end %>
