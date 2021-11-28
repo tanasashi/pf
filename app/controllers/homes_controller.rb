@@ -6,10 +6,6 @@ class HomesController < ApplicationController
   def about
   end
 
-  def abouter
-  end
-
-
   def guest_sign_in
     user = User.find_or_create_by!(name: 'guest', email: 'guest@gst.com') do |user|
       user.password = SecureRandom.urlsafe_base64

@@ -13,12 +13,12 @@ Rails.application.routes.draw do
   patch 'users/mypage/withdrawl', to: 'users#withdrawl'
 
   get 'search', to: 'posts#search'
+  
   resources :posts, only: [:index, :create, :edit, :update, :destroy] do
     resource :bookmarks, only: [:create, :destroy]
   end
 
   resources :bookmarks, only: [:index]
-
   resources :prefectures, only: [:show]
 
 end

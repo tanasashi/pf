@@ -25,7 +25,7 @@
 コロナ後観光したい場所が決まっており、その観光場所の情報について先知りたい時。
 
 ## 設計書
-※まだ
+※https://docs.google.com/spreadsheets/d/1bQaF1Lfc-QI_KFqNPDa5UPr-egjAjxrz/edit#gid=549108681
 
 ## チャレンジ要素一覧
 https://docs.google.com/spreadsheets/d/1nUfLXZU5jf-o4bWw0IXxXA1JJM86wqYX0ebtyN3L86I/edit?usp=sharing

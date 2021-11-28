@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
 
-  has_many :prefectures,  dependent: :destroy
   belongs_to :user
+  has_many :prefectures,  dependent: :destroy
   has_many :bookmarks, dependent: :destroy
 
   attachment :image
